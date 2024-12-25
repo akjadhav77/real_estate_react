@@ -1,0 +1,115 @@
+.header_wrapper {
+  max-height: 100vh;
+  width: 100%;
+  position: relative;
+  /* z-index: 1; */
+}
+
+.headerSlide {
+  position: relative;
+}
+
+.headerSlide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* z-index: -1; */
+}
+
+.headerSlide img {
+  height: 100%;
+  width: 100%;
+  max-height: 100vh;
+}
+
+.header_wrapper .header_content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.header_wrapper .header_content small {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: anime_show_text 1s forwards ease-in-out;
+}
+
+.header_wrapper .header_content h1 {
+  font-size: 70px;
+  line-height: 82px;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: anime_show_text 1s 0.5s forwards ease-in-out;
+  /* font-weight: 300; */
+}
+
+.header_wrapper .header_content button {
+  margin-top: 16px;
+  /* opacity: 0; */
+  transform: translateY(-75px);
+  animation: anime_show_text 1s 0.6s forwards ease-in-out;
+}
+
+@keyframes anime_show_text {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+@media screen and (max-width:1400px) {
+    .header_content {
+        
+    }
+}
+
+
+@media screen and (max-width:1200px) {
+
+    .header_wrapper .header_content small {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      
+      .header_wrapper .header_content h1 {
+        font-size: 55px;
+        line-height: 70px;
+ 
+      }
+}
+
+
+@media screen and (max-width:900px) {
+    .headerSlide img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .header_content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .header_wrapper .header_content h1 {
+        font-size: 45px;
+        line-height: 55px;
+    }
+}
+
+
+
