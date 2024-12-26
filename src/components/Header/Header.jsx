@@ -11,7 +11,7 @@ import { Autoplay } from "swiper/modules";
 
 const Header = () => {
   return (
-    <div className={headerCSS.header_wrapper}>
+    <div className={headerCSS.header_wrapper} id="home">
       <Swiper
         speed={1500}
         autoplay={{

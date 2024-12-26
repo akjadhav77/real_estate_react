@@ -7,8 +7,9 @@ import projectImg4 from '../../assets/Project4.jpg'
 
 const Projects = () => {
   return (
-    <div className={`${projectCSS.project_wrapper} section`}>
+    <div className={`${projectCSS.project_wrapper} section`} id="projects">
       <h2>HomeDown Projects</h2>
+      <p className={projectCSS.main_para}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae unde cupiditate aut reprehenderit. Rerum excepturi blanditiis, ipsa aut voluptatum dicta?</p>
       <div className={projectCSS.project_cards}>
         <div className={projectCSS.project_card}>
             <img src={projectImg1} alt="" />
