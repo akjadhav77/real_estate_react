@@ -1,0 +1,61 @@
+.testimonials_wrapper {
+    flex-direction: row;
+    padding: 0;
+}
+
+.test_image {
+    width: 50%;
+    background-image: url(./../../assets/bootm_img_l-scaled-1-1.jpg);
+    background-size: cover;
+}
+
+.test_content {
+    width: 50%;
+}
+
+.test_content_text {
+    padding: 45px;
+}
+
+.test_content_text .test_rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.test_content_text .test_rating i {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.test_content_text p {
+    color: whitesmoke;
+}
+
+.test_content_text .test_profile {
+    /* display: flex; */
+    color: whitesmoke;
+    margin-top: 15px;
+}
+
+.test_content_text .test_profile img {
+    width: 80px;
+    margin-top: 5px;
+
+}
+
+@media screen and (max-width:900px) {
+    .testimonials_wrapper {
+        flex-direction: column;
+    }
+
+    .test_image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .test_content {
+        width: 100%;
+    }
+}
+
