@@ -11,16 +11,17 @@
     z-index: 99999;
 
     border-bottom: 0.5px solid rgba(173, 173, 173, 0.7);
+}
+
+.scrolled {
+    background-color: rgba(37, 37, 37, 0.473);
     backdrop-filter: blur(15px);
+    /* color: red; */
 }
 
-.sticky {
-    background-color: rgba(226, 39, 39, 0.692);
-}
-
-.original {
+/* .original {
     background-color: transparent;
-}
+} */
 
 .nav_wrapper::before, .nav_wrapper::after {
     content: '';

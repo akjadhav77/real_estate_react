@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import navCSS from "./Nav.module.css";
 
 const Nav = () => {
@@ -6,9 +6,31 @@ const Nav = () => {
     const menu = useRef()
     const nav = useRef()
 
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 100) {
+          setIsScrolled(true)
+        }
+        else {
+          setIsScrolled(false)
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll)
+
+      return () => {
+        window.addEventListener('scroll', handleScroll)
+      }
+
+    }, [])
+
     const menuHandler = () => {
         menu.current.classList.toggle(navCSS.ShowMenu)
     }
+
+
 
     // window.addEventListener('scroll', function () {
     //   if (window.scrollY > 100) {
@@ -20,7 +42,7 @@ const Nav = () => {
     // })
 
   return (
-    <div className={navCSS.nav_wrapper} ref={nav}>
+    <div className={`${navCSS.nav_wrapper} ${isScrolled ? navCSS.scrolled : ''}`} >
       <div className={navCSS.logo}>
         <i className="ri-arrow-up-down-line"></i>
         <a href="#">Home</a>
