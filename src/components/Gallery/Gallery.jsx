@@ -10,7 +10,7 @@ import galleryImg6 from '../../assets/Gallery06.jpg'
 
 const Gallery = () => {
   return (
-    <div className={`${galleryCSS.gallery_wrapper} section`}>
+    <div className={`${galleryCSS.gallery_wrapper} section`} id='gallery'>
         <h2>Gallery</h2>
         <p className={galleryCSS.para}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quaerat dolor eaque modi quam incidunt?</p>
 

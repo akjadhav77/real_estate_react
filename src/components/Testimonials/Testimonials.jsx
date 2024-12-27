@@ -7,7 +7,7 @@ import signature from "../../assets/signature-2.png";
 
 const Testimonials = () => {
   return (
-    <div className={`${testCSS.testimonials_wrapper} section`}>
+    <div className={`${testCSS.testimonials_wrapper} section`} id="testimonials">
       <div className={testCSS.test_image}></div>
       <div className={testCSS.test_content}>
         <Swiper 

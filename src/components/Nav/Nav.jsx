@@ -4,13 +4,23 @@ import navCSS from "./Nav.module.css";
 const Nav = () => {
 
     const menu = useRef()
+    const nav = useRef()
 
     const menuHandler = () => {
         menu.current.classList.toggle(navCSS.ShowMenu)
     }
 
+    // window.addEventListener('scroll', function () {
+    //   if (window.scrollY > 100) {
+    //     nav.current.classList.add(navCSS.sticky)
+    //   }
+    //   else {
+    //     nav.current.classList.add(navCSS.sticky)
+    //   }
+    // })
+
   return (
-    <div className={navCSS.nav_wrapper}>
+    <div className={navCSS.nav_wrapper} ref={nav}>
       <div className={navCSS.logo}>
         <i className="ri-arrow-up-down-line"></i>
         <a href="#">Home</a>
